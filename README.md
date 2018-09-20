@@ -1,6 +1,6 @@
 # Multimedia Converter Web
 
-A laravel web-apps to convert image, audio, and video file.
+A laravel web-apps to convert image, audio, and video file
 
 ## Prerequisites
 
