@@ -1,95 +1,73 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="CodePixar">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Agency</title>
 
-        <title>Laravel</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,500,600" rel="stylesheet">
+		<!--
+		CSS
+		============================================= -->
+		<link rel="stylesheet" href="{{url('css/linearicons.css')}}">
+		<link rel="stylesheet" href="{{url('css/owl.carousel.css')}}">
+		<link rel="stylesheet" href="{{url('css/font-awesome.min.css')}}">
+		<link rel="stylesheet" href="{{url('css/animate.css')}}">
+		<link rel="stylesheet" href="{{url('css/bootstrap.css')}}">
+		<link rel="stylesheet" href="{{url('css/main.css')}}">
+	</head>
+	<body>
+		<div id="top"></div>
+		<!-- Start Header Area -->
+		<header class="default-header">
+			<div class="sticky-header">
+				<div class="container">
+					<div class="header-content d-flex justify-content-between align-items-center">
+						<div class="logo">
+							<a href="#top" class="smooth"><img src="img/logo.png" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- End Header Area -->
+		<!-- Start Banner Area -->
+		<section class="banner-area relative">
+			<div class="overlay overlay-bg"></div>
+			<div class="container">
+				<div class="row fullscreen justify-content-center align-items-center">
+					<div class="col-lg-10">
+						<div class="banner-content text-center">
+							<p class="text-uppercase text-white">For all your file converting solution</p>
+							<h1 class="text-uppercase text-white">Select what kind of file you want to convert</h1>
+							<a href="#" class="primary-btn banner-btn">Image</a>
+							<a href="#" class="primary-btn banner-btn">Audio</a>
+							<a href="#" class="primary-btn banner-btn">Video</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Banner Area -->
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+		<script src="js/jquery-2.2.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.ajaxchimp.min.js"></script>
+		<script src="js/jquery.sticky.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/mixitup.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>
