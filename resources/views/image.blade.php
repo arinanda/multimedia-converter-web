@@ -59,7 +59,24 @@
                               {{-- <span class="pickFile">
                                 <a href="#" class="pickFileButton">Pick file</a>
                               </span> --}}
-                            </form>
+							</form>
+							<form id="myForm" action="mail.php" method="post" class="contact-form">
+								<div class="single-input color-2 mb-10">
+									<input type="text" name="fname" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'" required>
+								</div>
+								<div class="single-input color-2 mb-10">
+									<input type="email" name="email" placeholder="Email Address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required>
+								</div>
+								<div class="single-input color-2 mb-10">
+									<input type="text" name="subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'" required>
+								</div>
+	
+								<div class="single-input color-2 mb-10">
+									<textarea name="message" placeholder="Type your message here..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type your message here...'" required></textarea>
+								</div>
+								<div class="d-flex justify-content-center"><button class="mt-10 primary-btn banner-btn d-inline-flex text-uppercase align-items-center">Convert</button></div>
+								<div class="alert"></div>
+							</form>
                           </div>
 					</div>
 				</div>
