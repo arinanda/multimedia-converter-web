@@ -62,17 +62,40 @@
 							</form>
 							<form id="myForm" action="mail.php" method="post" class="contact-form">
 								<div class="single-input color-2 mb-10">
-									<input type="text" name="fname" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'" required>
+									{{-- <input type="text" name="fname" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'" required> --}}
+									<select id="region" name="region" placeholder="Pilih Region" class="form-control">
+										<option>Output Format</option>
+										<option value="bmp">bmp</option>
+										<option value="eps">eps</option>
+										<option value="gif">gif</option>
+										<option value="ico">ico</option>
+										<option value="jpg">jpg</option>
+										<option value="odd">odd</option>
+										<option value="png">png</option>
+										<option value="ps">ps</option>
+										<option value="psd">psd</option>
+										<option value="tiff">tiff</option>
+										<option value="webp">webp</option>
+									  </select>
 								</div>
 								<div class="single-input color-2 mb-10">
-									<input type="email" name="email" placeholder="Email Address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required>
+									<input type="email" name="email" placeholder="Height" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Height'" required>
 								</div>
 								<div class="single-input color-2 mb-10">
-									<input type="text" name="subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'" required>
+									<input type="text" name="subject" placeholder="Width" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Width'" required>
 								</div>
-	
 								<div class="single-input color-2 mb-10">
-									<textarea name="message" placeholder="Type your message here..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type your message here...'" required></textarea>
+									{{-- <input type="text" name="fname" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'" required> --}}
+									<select id="region" name="region" placeholder="Pilih Region" class="form-control">
+										<option>Rotate</option>
+										<option value="0">No Change</option>
+										<option value="90">90°</option>
+										<option value="180">180°</option>
+										<option value="270">270°</option>
+										</select>
+								</div>
+								<div class="single-input color-2 mb-10">
+									<input type="text" name="subject" placeholder="Quality" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Quality'" required>
 								</div>
 								<div class="d-flex justify-content-center"><button class="mt-10 primary-btn banner-btn d-inline-flex text-uppercase align-items-center">Convert</button></div>
 								<div class="alert"></div>
