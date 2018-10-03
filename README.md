@@ -8,8 +8,27 @@ A laravel web-apps to convert image, audio, and video file
 2. Composer v1.7.2. You can download it [here](https://getcomposer.org/Composer-Setup.exe)
 
 ### Installation Notes
+#### Installing CloudConvert
 
-- TBD
+- Add this to your `composer.json` dependencies:
+
+```js
+"require": {
+   "robbiep/cloudconvert-laravel": "2.*"
+}
+```
+- Run `composer install` to download the required files.
+
+- Next you need to add the service provider to `config/app.php`
+```php
+'providers' => array(
+    ...
+    RobbieP\CloudConvertLaravel\CloudConvertLaravelServiceProvider::class
+)
+```
+- You need to publish the config `php artisan vendor:publish`
+- Just enter your API key in `config/cloudconvert.php` 
+
 
 ## Running using artisan for Development
 
