@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/','welcome');
+Route::view('/image','image');
+Route::view('/video','video');
+Route::view('/audio','audio');
