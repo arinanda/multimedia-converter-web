@@ -74,7 +74,7 @@
                                     <label class="label">Bitrate</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="audio_bitrate">
-                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option selected="selected" value="">no change</option>
                                             <option value="32">32 kbps</option>
                                             <option value="64">64 kbps</option>
                                             <option value="128">128 kbps</option>
@@ -90,7 +90,7 @@
                                     <label class="label">Frequency</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="audio_frequency">
-                                            <option value="false" selected="selected">no change</option>
+                                            <option value="" selected="selected">no change</option>
                                             <option value="8000">8000 Hz</option>
                                             <option value="11025">11025 Hz</option>
                                             <option value="22050">22050 Hz</option>
@@ -110,27 +110,40 @@
                                     <label class="label">Normalization</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="audio_normalize">
-                                            <option value="-100">-100 db</option>
-                                            <option value="-90">-90 db</option>
-                                            <option value="-80">-80 db</option>
-                                            <option value="-70">-70 db</option>
-                                            <option value="-60">-60 db</option>
-                                            <option value="-50">-50 db</option>
-                                            <option value="-40">-40 db</option>
-                                            <option value="-30">-30 db</option>
-                                            <option value="-20">-20 db</option>
-                                            <option value="-10">-10 db</option>
-                                            <option value="false" selected="selected">no change</option>
-                                            <option value="10">10 db</option>
-                                            <option value="20">20 db</option>
-                                            <option value="30">30 db</option>
-                                            <option value="40">40 db</option>
-                                            <option value="50">50 db</option>
-                                            <option value="60">60 db</option>
-                                            <option value="70">70 db</option>
-                                            <option value="80">80 db</option>
-                                            <option value="90">90 db</option>
-                                            <option value="100">100 db</option>
+                                            <option value="-100dB">-100 db</option>
+                                            <option value="-90dB">-90 db</option>
+                                            <option value="-80dB">-80 db</option>
+                                            <option value="-70dB">-70 db</option>
+                                            <option value="-60dB">-60 db</option>
+                                            <option value="-50dB">-50 db</option>
+                                            <option value="-40dB">-40 db</option>
+                                            <option value="-30dB">-30 db</option>
+                                            <option value="-20dB">-20 db</option>
+                                            <option value="-10dB">-10 db</option>
+                                            <option value="" selected="selected">no change</option>
+                                            <option value="+10dB">+10 db</option>
+                                            <option value="+20dB">+20 db</option>
+                                            <option value="+30dB">+30 db</option>
+                                            <option value="+40dB">+40 db</option>
+                                            <option value="+50dB">+50 db</option>
+                                            <option value="+60dB">+60 db</option>
+                                            <option value="+70dB">+70 db</option>
+                                            <option value="+80dB">+80 db</option>
+                                            <option value="+90dB">+90 db</option>
+                                            <option value="+100dB">+100 db</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price-slider col-2">
+                                <div class="input-group">
+                                    <label class="label">Channels</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="audio_channels">
+                                            <option value="" selected="selected">no change</option>
+                                            <option value="1">mono</option>
+                                            <option value="2">stereo</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>

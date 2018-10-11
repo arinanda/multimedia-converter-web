@@ -19,6 +19,7 @@ class AudioController extends Controller
         $audio_bitrate = $request->audio_bitrate;
         $audio_frequency = $request->audio_frequency;
         $audio_normalize = $request->audio_normalize;
+        $audio_channels = $request->audio_channels;
         
 
         CloudConvert::file($destinationPath.'/'.$input['input_file'])->to($output_format)->withOptions([
