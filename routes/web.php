@@ -14,5 +14,11 @@
 Route::view('/','welcome');
 Route::view('/image','image');
 Route::post('/image', 'ImageController@post');
+
+Route::post('/audio', 'AudioController@post');
+
+Route::post('/video', 'VideoController@post');
+
 Route::view('/video','video');
+
 Route::view('/audio','audio');
