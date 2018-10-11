@@ -32,6 +32,6 @@ class ImageController extends Controller
         File::delete($destinationPath.'/'. $input['input_file']);
         $input['input_file'] = $videotmp.'.'.$output_format;
 
-        return response()->download($destinationPath.'/'.$input['input_file']);
+        return response()->download($destinationPath.'/'.$input['input_file'])->deleteFileAfterSend(true);
     }
 }
