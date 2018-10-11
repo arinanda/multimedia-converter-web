@@ -68,21 +68,76 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="row row-space">
+                        <div class="row row-space">
                             <div class="price-slider col-2">
                                 <div class="input-group">
-                                    <label class="label">Quality</label>
-                                    <input class="input--style-4" type="text" name="quality">
+                                    <label class="label">Bitrate</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="audio_bitrate">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="32">32 kbps</option>
+                                            <option value="64">64 kbps</option>
+                                            <option value="128">128 kbps</option>
+                                            <option value="256">256 kbps</option>
+                                            <option value="320">320 kbps</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="price-slider col-2">
                                 <div class="input-group">
-                                    <label class="label">Density</label>
-                                    <input class="input--style-4" type="text" name="density">
+                                    <label class="label">Frequency</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="audio_frequency">
+                                            <option value="false" selected="selected">no change</option>
+                                            <option value="8000">8000 Hz</option>
+                                            <option value="11025">11025 Hz</option>
+                                            <option value="22050">22050 Hz</option>
+                                            <option value="24000">24000 Hz</option>
+                                            <option value="32000">32000 Hz</option>
+                                            <option value="44100">44100 Hz</option>
+                                            <option value="48000">48000 Hz</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group">
+                        <div class="row row-space">
+                            <div class="price-slider col-2">
+                                <div class="input-group">
+                                    <label class="label">Normalization</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="audio_normalize">
+                                            <option value="-100">-100 db</option>
+                                            <option value="-90">-90 db</option>
+                                            <option value="-80">-80 db</option>
+                                            <option value="-70">-70 db</option>
+                                            <option value="-60">-60 db</option>
+                                            <option value="-50">-50 db</option>
+                                            <option value="-40">-40 db</option>
+                                            <option value="-30">-30 db</option>
+                                            <option value="-20">-20 db</option>
+                                            <option value="-10">-10 db</option>
+                                            <option value="false" selected="selected">no change</option>
+                                            <option value="10">10 db</option>
+                                            <option value="20">20 db</option>
+                                            <option value="30">30 db</option>
+                                            <option value="40">40 db</option>
+                                            <option value="50">50 db</option>
+                                            <option value="60">60 db</option>
+                                            <option value="70">70 db</option>
+                                            <option value="80">80 db</option>
+                                            <option value="90">90 db</option>
+                                            <option value="100">100 db</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- <div class="input-group">
                             <label class="label">Rotate</label>
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="rotate">

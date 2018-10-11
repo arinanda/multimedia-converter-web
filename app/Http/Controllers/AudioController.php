@@ -16,16 +16,17 @@ class AudioController extends Controller
         $destinationPath = public_path('/videos');
         $file->move($destinationPath, $input['input_file']);
         $output_format = $request->output_format;
-        $quality = $request->quality;
-        $density = $request->density;
-        $rotate = $request->rotate;
-        $grayscale = $request->grayscale;
-        $auto_orient = $request->auto_orient;
-        $height = $request->height;
-        $width = $request->width;
+        $audio_bitrate = $request->audio_bitrate;
+        $audio_frequency = $request->audio_frequency;
+        $audio_normalize = $request->audio_normalize;
         
 
-        CloudConvert::file($destinationPath.'/'.$input['input_file'])->to($output_format);
+        CloudConvert::file($destinationPath.'/'.$input['input_file'])->to($output_format)->withOptions([
+            'audio_bitrate' => $audio_bitrate,
+            'audio_channels' => $audio_channels,
+            'audio_frequency' => $audio_frequency,
+            'audio_normalize' => $audio_normalize
+        ]);
         File::delete($destinationPath.'/'. $input['input_file']);
         $input['input_file'] = $videotmp.'.'.$output_format;
 
