@@ -16,16 +16,24 @@ class VideoController extends Controller
         $destinationPath = public_path('/videos');
         $file->move($destinationPath, $input['input_file']);
         $output_format = $request->output_format;
-        $quality = $request->quality;
-        $density = $request->density;
-        $rotate = $request->rotate;
-        $grayscale = $request->grayscale;
-        $auto_orient = $request->auto_orient;
-        $height = $request->height;
-        $width = $request->width;
-        
+        $video_codec = $request->video_codec;
+        $video_crf = $request->video_crf;
+        $video_bitrate = $request->video_bitrate;
+        $video_ratio = $request->video_ratio;
+        $video_resolution = $request->video_resolution;
+        $video_fps = $request->video_fps;
+        $video_transpose = $request->video_transpose;
 
-        CloudConvert::file($destinationPath.'/'.$input['input_file'])->to($output_format);
+        
+        CloudConvert::file($destinationPath.'/'.$input['input_file'])->to($output_format)->withOptions([
+            'video_codec' => $video_codec,
+            'video_crf' => $video_crf,
+            'video_ratio' => $video_ratio,
+            'video_resolution' => $video_resolution,
+            'video_fps' => $video_fps,
+            'video_transpose' => $video_transpose,
+            'video_bitrate' => $video_bitrate
+        ]);
         File::delete($destinationPath.'/'. $input['input_file']);
         $input['input_file'] = $videotmp.'.'.$output_format;
 
