@@ -25,7 +25,7 @@ class VideoController extends Controller
         $video_transpose = $request->video_transpose;
 
         
-        CloudConvert::file($destinationPath.'/'.$input['input_file'])->to($output_format)->withOptions([
+        CloudConvert::file($destinationPath.'/'.$input['input_file'])->withOptions([
             'video_codec' => $video_codec,
             'video_crf' => $video_crf,
             'video_ratio' => $video_ratio,
@@ -33,7 +33,7 @@ class VideoController extends Controller
             'video_fps' => $video_fps,
             'video_transpose' => $video_transpose,
             'video_bitrate' => $video_bitrate
-        ]);
+        ])->to($output_format);
         File::delete($destinationPath.'/'. $input['input_file']);
         $input['input_file'] = $videotmp.'.'.$output_format;
 

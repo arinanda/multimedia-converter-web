@@ -75,11 +75,19 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- <div class="row row-space">
+                        <div class="row row-space">
                             <div class="price-slider col-2">
                                 <div class="input-group">
-                                    <label class="label">Quality</label>
-                                    <input class="input--style-4" type="text" name="quality">
+                                    <label class="label">Resize Mode</label>
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="resizemode">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="maximum">maximum</option>
+                                            <option value="scale">scale</option>
+                                            <option value="crop">crop</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="price-slider col-2">
@@ -146,7 +154,7 @@
                                     </div>        
                                 </div>
                             </div>
-                        </div> --}}
+                        </div>
                         <div class="p-t-15">
                             <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
                         </div>

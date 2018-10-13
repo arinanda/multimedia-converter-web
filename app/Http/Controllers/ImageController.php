@@ -19,16 +19,23 @@ class ImageController extends Controller
         $destinationPath = public_path('/videos');
         $file->move($destinationPath, $input['input_file']);
         $output_format = $request->output_format;
-        $quality = $request->quality;
+        // $quality = $request->quality;
+        $resizemode = $request->resizemode;
         $density = $request->density;
         $rotate = $request->rotate;
         $grayscale = $request->grayscale;
         $auto_orient = $request->auto_orient;
         $height = $request->height;
         $width = $request->width;
-        
+        // dd($request->input());
 
-        CloudConvert::file($destinationPath.'/'.$input['input_file'])->to($output_format);
+        CloudConvert::file($destinationPath.'/'.$input['input_file'])->withOptions([
+            'resize' => $height.'x'.$width,
+            'resizemode' => $resizemode,
+            'grayscale' => $grayscale,
+            'density' => $density,
+            'rotate' => $rotate
+        ])->to($output_format);
         File::delete($destinationPath.'/'. $input['input_file']);
         $input['input_file'] = $videotmp.'.'.$output_format;
 
