@@ -82,6 +82,7 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="resizemode">
                                             <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option value="">None</option>
                                             <option value="maximum">maximum</option>
                                             <option value="scale">scale</option>
                                             <option value="crop">crop</option>
@@ -102,6 +103,7 @@
                             <div class="rs-select2 js-select-simple select--no-search">
                                 <select name="rotate">
                                     <option disabled="disabled" selected="selected">Choose option</option>
+                                    <option value="">None</option>
                                     <option value="90">90°</option>
                                     <option value="180">180°</option>
                                     <option value="270">270°</option>

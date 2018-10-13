@@ -30,7 +30,7 @@ class ImageController extends Controller
         // dd($request->input());
 
         CloudConvert::file($destinationPath.'/'.$input['input_file'])->withOptions([
-            'resize' => $height.'x'.$width,
+            'resize' => $width.'x'.$height,
             'resizemode' => $resizemode,
             'grayscale' => $grayscale,
             'density' => $density,
