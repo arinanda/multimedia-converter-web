@@ -22,12 +22,12 @@ class AudioController extends Controller
         $audio_channels = $request->audio_channels;
         
 
-        CloudConvert::file($destinationPath.'/'.$input['input_file'])->to($output_format)->withOptions([
+        CloudConvert::file($destinationPath.'/'.$input['input_file'])->withOptions([
             'audio_bitrate' => $audio_bitrate,
             'audio_channels' => $audio_channels,
             'audio_frequency' => $audio_frequency,
             'audio_normalize' => $audio_normalize
-        ]);
+        ])->to($output_format);
         File::delete($destinationPath.'/'. $input['input_file']);
         $input['input_file'] = $videotmp.'.'.$output_format;
 
