@@ -85,8 +85,8 @@
                                     <label class="label">Codec</label>
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="video_codec">
-                                            <option selected="selected" value="">copy video from input file (withour reencoding)</option>
-                                            <option value="H264">H264</option>
+                                            <option value="">copy video from input file (withour reencoding)</option>
+                                            <option selected="selected" value="H264">H264</option>
                                             <option value="H265">H265</option>
                                             <option value="MPEG4">MPEG4</option>
                                         </select>
