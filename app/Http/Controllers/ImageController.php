@@ -25,12 +25,18 @@ class ImageController extends Controller
         $rotate = $request->rotate;
         $grayscale = $request->grayscale;
         $auto_orient = $request->auto_orient;
-        $height = $request->height;
-        $width = $request->width;
+        if (!empty($request->height)&&!empty($request->width)) {
+            $height = $request->height;
+            $width = $request->width;
+            $resize = $width.'x'.$height; 
+        }else {
+            $resize='';
+        }
+        
         // dd($request->input());
 
         CloudConvert::file($destinationPath.'/'.$input['input_file'])->withOptions([
-            'resize' => $width.'x'.$height,
+            'resize' => $resize,
             'resizemode' => $resizemode,
             'grayscale' => $grayscale,
             'density' => $density,
